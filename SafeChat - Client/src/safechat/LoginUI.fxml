@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" styleClass="parent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="safechat.LoginUIController">
+  <children>
+    <HBox layoutX="0.0" layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="900.0" snapToPixel="true" styleClass="sidebar">
+      <padding>
+        <Insets top="100.0" />
+      </padding>
+      <stylesheets>
+        <URL value="@Stylesheet.css" />
+      </stylesheets>
+    </HBox>
+    <Label fx:id="greeting" layoutX="23.0" layoutY="9.0" prefWidth="600.0" text="Fetching details....." textFill="WHITE">
+      <font>
+        <Font name="Ebrima Bold" size="30.0" />
+      </font>
+    </Label>
+    <Button fx:id="logoutButton" layoutX="786.0" layoutY="9.0" minHeight="32.0" mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="110.0" styleClass="logoutButton" text="Logout" textAlignment="LEFT" underline="false">
+      <font>
+        <Font name="Ebrima Bold" size="16.0" />
+      </font>
+      <stylesheets>
+        <URL value="@Stylesheet.css" />
+      </stylesheets>
+    </Button>
+    <Pane layoutX="687.0" layoutY="57.0" prefHeight="643.0" prefWidth="214.0" styleClass="onlinePanel">
+      <children>
+        <Separator layoutX="0.0" layoutY="34.0" prefWidth="214.0">
+          <stylesheets>
+            <URL value="@Stylesheet.css" />
+          </stylesheets>
+        </Separator>
+        <Label fx:id="panelGreeting" layoutX="7.0" layoutY="-2.0" minHeight="37.0" prefHeight="39.000091552734375" prefWidth="200.0" text="Users Online(0)" textFill="#a3a3a3">
+          <font>
+            <Font name="Ebrima Bold" size="20.0" />
+          </font>
+        </Label>
+        <Button fx:id="viewUsersButton" layoutX="1.0" layoutY="35.0" mnemonicParsing="false" onAction="#viewUsers" prefWidth="211.0" text="View users/Refresh">
+          <stylesheets>
+            <URL value="@Stylesheet.css" />
+          </stylesheets>
+        </Button>
+            <GridPane fx:id="gridPane" layoutX="7.0" layoutY="67.0" prefHeight="356.0" prefWidth="186.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="33.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="153.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label layoutX="7.0" layoutY="592.0" minHeight="37.0" prefHeight="37.0" prefWidth="200.0" text="Please click on the username to start chat">
+               <font>
+                  <Font name="Ebrima Bold" size="10.0" fx:id="x1" />
+               </font>
+               <textFill>
+                  <Color blue="0.639" green="0.639" red="0.639" fx:id="x2" />
+               </textFill>
+            </Label>
+      </children>
+      <stylesheets>
+        <URL value="@Stylesheet.css" />
+      </stylesheets>
+    </Pane>
+    <TextArea fx:id="textarea" editable="false" layoutX="14.0" layoutY="206.0" prefHeight="409.0" prefWidth="661.0" promptText="Your messages will appear here" stylesheets="@Stylesheet.css" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextArea>
+    <TextField fx:id="textfield" layoutX="14.0" layoutY="633.0" prefHeight="39.0" prefWidth="560.0" promptText="Type your message here" />
+      <Button fx:id="sendbuttonChat" layoutX="591.0" layoutY="633.0" minHeight="32.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="39.0" prefWidth="84.0" styleClass="logoutButton" text="Send" textAlignment="LEFT" underline="false">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+         <stylesheets>
+            <URL value="@Stylesheet.css" />
+         </stylesheets>
+      </Button>
+      <Label fx:id="error" layoutX="15.0" layoutY="92.0" prefHeight="27.0" prefWidth="581.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+  </children>
+  <stylesheets>
+    <URL value="@Stylesheet.css" />
+  </stylesheets>
+</AnchorPane>

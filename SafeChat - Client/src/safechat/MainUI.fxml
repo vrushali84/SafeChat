@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-1.0" minWidth="-Infinity" prefHeight="649.0" prefWidth="821.0" styleClass=", parent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="safechat.MainUI">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <VBox alignment="CENTER" layoutX="-1.0" prefHeight="649.0" prefWidth="408.0" styleClass="sidebar">
+      <children>
+        <Label text="Welcome to SafeChat" textFill="WHITE">
+          <font>
+            <Font name="Ebrima Bold" size="30.0" />
+          </font>
+        </Label>
+      </children>
+      <stylesheets>
+        <URL value="@Stylesheet.css" />
+      </stylesheets>
+    </VBox>
+    <Pane fx:id="content_Area" layoutX="411.0" layoutY="11.0" prefHeight="626.0000999999975" prefWidth="401.0">
+      <children>
+        <TextField fx:id="usernameField" layoutX="81.0" layoutY="206.0" prefHeight="40.0" prefWidth="240.0" promptText="Username" />
+        <Label layoutX="50.0" layoutY="55.0" text="Welcome Back," textFill="#545454">
+          <font>
+            <Font name="Impact" size="24.0" />
+          </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="102.0" minHeight="37.0" prefHeight="37.0" prefWidth="185.0" text="Sign in to continue">
+          <font>
+            <Font name="Ebrima Bold" size="14.0" fx:id="x1" />
+          </font>
+          <textFill>
+            <Color blue="0.639" green="0.639" red="0.639" fx:id="x2" />
+          </textFill>
+        </Label>
+        <PasswordField fx:id="passwordField" layoutX="81.0" layoutY="274.0" prefHeight="40.0" prefWidth="240.0" promptText="Password" />
+        <Label font="$x1" layoutX="201.0" layoutY="398.0" minHeight="37.0" onMouseClicked="#open_Registration" prefHeight="37.0" prefWidth="93.0" text="Sign up">
+          <textFill>
+            <Color blue="0.247" green="0.224" red="0.196" fx:id="x3" />
+          </textFill>
+        </Label>
+        <Label font="$x1" layoutX="126.0" layoutY="398.0" minHeight="37.0" prefHeight="37.0" prefWidth="75.0" text="New user ?" textFill="$x2" />
+        <Button fx:id="loginButton" layoutX="81.0" layoutY="348.0" minHeight="40.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="240.0" styleClass="loginButton" text="LOGIN">
+          <font>
+            <Font name="Impact" size="20.0" />
+          </font>
+          <stylesheets>
+            <URL value="@Stylesheet.css" />
+          </stylesheets>
+        </Button>
+        <Circle fx:id="status_Color" fill="RED" layoutX="24.0" layoutY="604.0" radius="9.5" stroke="BLACK" strokeType="INSIDE" />
+        <Label fx:id="status" font="$x1" layoutX="34.0" layoutY="586.0" minHeight="37.0" onMouseClicked="#open_Registration" prefHeight="37.0" prefWidth="56.0" text="Offline" textFill="$x3" />
+        <Label id="status" fx:id="error_status" font="$x1" layoutX="81.0" layoutY="321.0" minHeight="19.0" prefHeight="19.0" prefWidth="239.99997792968497" text="" textFill="#a3a3a3" />
+      </children>
+    </Pane>
+  </children>
+  <stylesheets>
+    <URL value="@Stylesheet.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0000999999975" prefWidth="401.0" styleClass="parent" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="safechat.RegistrationUIController">
+  <children>
+    <Label layoutX="70.0" layoutY="89.0" text="Registration Form" textFill="#545454">
+      <font>
+        <Font name="Impact" size="24.0" />
+      </font>
+    </Label>
+    <Label layoutX="70.0" layoutY="119.0" minHeight="37.0" prefHeight="37.0" prefWidth="185.0" text="Please fill the details below" textFill="#a3a3a3">
+      <font>
+        <Font name="Ebrima Bold" size="14.0" />
+      </font>
+    </Label>
+    <TextField fx:id="registerUsername" layoutX="70.0" layoutY="326.0" prefHeight="40.0" prefWidth="240.0" promptText="Enter a username" />
+    <PasswordField fx:id="registerPassword" layoutX="70.0" layoutY="380.0" prefHeight="40.0" prefWidth="240.0" promptText="Your new password" />
+    <PasswordField fx:id="cregisterPassword" layoutX="70.0" layoutY="433.0" prefHeight="40.0" prefWidth="240.0" promptText="Confirm password" />
+    <Button fx:id="registerButton" layoutX="70.0" layoutY="548.0" minHeight="40.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="40.0" prefWidth="240.0" styleClass="loginButton" text="Register" textFill="#292929">
+      <font>
+        <Font name="Impact" size="20.0" />
+      </font>
+      <stylesheets>
+        <URL value="@Stylesheet.css" />
+      </stylesheets>
+    </Button>
+    <ImageView id="if_go-back_60181 (1).png" fx:id="goBackButton" fitHeight="30.0" fitWidth="41.000099182128906" layoutX="14.0" layoutY="14.0" onMouseClicked="#back_to_Login" preserveRatio="false" visible="true">
+      <image>
+        <Image url="@icons/goBackblack.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
+    <TextField id="registerUsername" fx:id="registerFirstname" layoutX="70.0" layoutY="273.0" prefHeight="40.0" prefWidth="114.0" promptText="First Name" />
+    <TextField id="registerUsername" fx:id="registerLastname" layoutX="196.0" layoutY="273.0" prefHeight="40.0" prefWidth="114.0" promptText="Last Name" />
+    <Label fx:id="status" layoutX="70.0" layoutY="490.0" prefWidth="240.0" text="" />
+  </children>
+  <stylesheets>
+    <URL value="@Stylesheet.css" />
+  </stylesheets>
+</AnchorPane>

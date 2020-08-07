@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 24, 2018, 7:58:39 AM
+    Author     : iZooGooD
+*/
+
+.sidebar {
+    -fx-background-color:#32393F;
+    
+}
+.parent {
+    -fx-background-color: #EAECF0;
+}
+.textarea{
+    -fx-background-color:blue;
+}
+
+.loginButton:hover
+{
+ -fx-background-color: #32393F;
+ -fx-text-fill: white;
+}
+.onlinePanel{
+    -fx-background-color: white;
+}
+
+.separator *.line { 
+-fx-border-style: solid;
+-fx-border-width: 3px;
+
+}
+.logoutButton {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+
+}
+.logoutButton:hover
+{
+ -fx-background-color: #32393F;
+ -fx-text-fill: white;
+}
+.logoutButton:pressed
+{
+ -fx-background-color: #4CAF50;
+ -fx-text-fill: white;
+}
+.myButton:hover{
+    -fx-background-color: #EAECF0;
+
+}
